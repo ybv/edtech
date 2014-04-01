@@ -5,6 +5,8 @@
 <link rel="stylesheet" type="text/css" href="pure-min.css">
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="owl.carousel.css">
+<link rel="stylesheet" href="owl.theme.css">
 <style type="text/css">
 .coverfront{
 	background-color: #354b95;
@@ -15,8 +17,10 @@
 	text-align: center;	
 }
 .hero-text{
-	margin-top: 200px;
-	margin-bottom: 200px;
+	margin-top: 250px;
+	margin-bottom: 50px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 .hero-text p{
 	font-family:  'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif; 
@@ -29,25 +33,27 @@
 }
 .lead-3, .lead-2, .lead-1{
 	background-color: #354b95;
-	padding-bottom: 40px;
+	padding-bottom: 80px;
 	padding-top: 20px;
 	color: #fff;
 }
 .logo{
-	margin-top: 400px;
+	padding-top: 200px;
 }
 .social-buttons{
-	margin-bottom: 400px;
+	padding-bottom: 150px;
 }
 .form-submit p{
 	font-family:  'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Arial, Helvetica, sans-serif; 
 	font-size: 16px;
 }
 .form-submit input{
-	height: 40px;
-	margin-bottom: 5px;
 	width: 30%;
+	margin-bottom: 5px;
+	text-align: center;
+	height: 45px;
 }
+
 .pure-button{
 	background-color: #354b95;
 	font-family:  'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif; 
@@ -55,9 +61,7 @@
 .social-buttons i{
 	color: #dadada;
 }
-.pure-form .pure-input-cust {
-	width: 25%;
-}
+
 .footer{
 	text-align: center;
 	margin-bottom: 50px;
@@ -69,12 +73,50 @@
 	text-decoration: none;
 }
 
+.mob{
+	margin-left: 30%;
+	margin-right: 30%;
+}
+.cor{
+	background-color: #fff;
+	height: 100px;
+	bottom: 0;
+}
+
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
 </style>
+<script type="text/javascript">
+	$(document).ready(function() {
+ 
+  $("#owl-demo").owlCarousel({
+ 
+      navigation : false, // Show next and prev buttons
+      slideSpeed : 1000,
+      paginationSpeed : 2000,
+      singleItem:true,
+      autoPlay: 3000
+ 
+      // "singleItem:true" is a shortcut for:
+      // items : 1, 
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+ 
+  });
+ 
+});
+</script>
 </head>
 <body>
 
-<div class="pure-g-r">
-	<div class="pure-u-1 coverfront">
+<div class="pure-g-r container">
+	<div class="pure-u-1-2">
+		<div class="pure-u-1 coverfront">
 		<div class="pure-g-r">
 			<div class="pure-u-1">
 				<div class="hero-text">
@@ -109,10 +151,15 @@
 				</div>
 			</div>
 		</div>
+		</div>
+		<div class="pure-u-1 cor">
+			<div id="owl-demo" class="owl-carousel owl-theme">
+			  <div class="item"><img src="tc.png" alt="The Last of us"></div>
+			  <div class="item"><img src="tc.png" alt="The Last of us"></div> 
+			</div>
+		</div>
 	</div>
-	<div class="pure-u-1">
-	</div>
-	<div class="pure-u-1 coverback">
+	<div class="pure-u-1-2 coverback">
 		<div class="logo">
 			<img src="em-logo.png" alt="edtech">
 		</div>
@@ -120,11 +167,20 @@
 			<p> building edtech? </p>
 		</div>
 		<div class="form-submit">
-			<form class="pure-form">
-	    		<input class="pure-input-cust" type="text" placeholder="Email">
-	    		<br>
-	    		 <button type="submit" class="pure-button pure-input-1-4 pure-button-primary">Submit</button>
-	    	</form>
+			<div class="pure-hidden-desktop pure-hidden-tablet">
+				<form class="pure-form mob">
+		    		 <input class="pure-input-1" id="mobinput" type="email" placeholder="Email">
+		    		<br>
+		    		 <button type="submit" class="pure-button pure-input-1 pure-button-primary">Submit</button>
+		    	</form>
+	    	</div>
+	    	<div class="pure-hidden-phone">
+				<form class="pure-form">
+		    		 <input class="pure-input-1-4" id="" type="email" placeholder="Email">
+		    		<br>
+		    		 <button type="submit" class="pure-button pure-input-1-4 pure-button-primary">Submit</button>
+		    	</form>
+	    	</div>
 	    	<p>(Share your email, and we'll get in touch)</p>
 		</div>
 		<div class="social-buttons">
@@ -132,11 +188,15 @@
 			<i class="fa fa-twitter"></i>
 			<i class="fa fa-google-plus"></i>
 		</div>
+		<div class="pure-u-1 footer">
+			<a href="http://www.emergeventurelab.com/" class="more-link">MORE ABOUT EMERGE EDUCATION</a>
+		</div>
 	</div>
-	<div class="pure-u-1 footer">
-		<a href="http://www.emergeventurelab.com/" class="more-link">MORE ABOUT EMERGE EDUCATION</a>
-	</div>
+	
 </div>
 
 </body>
+<script src="jquery-1.9.1.min.js"></script>
+<script src="owl.carousel.min.js"></script>
+<script src="scripts/wufoo.js"></script>
 </html>

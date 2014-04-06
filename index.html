@@ -154,18 +154,7 @@ body{
 }
 </style>
 <script type="text/javascript">
-function getUrlVars()
-{
-    var vars = [], hash;
-    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-    for(var i = 0; i < hashes.length; i++)
-    {
-        hash = hashes[i].split('=');
-        vars.push(hash[0]);
-        vars[hash[0]] = hash[1];
-    }
-    return vars;
-}
+
 $(document).ready(function() {
 
 $("#owl-demo").owlCarousel({
@@ -186,13 +175,6 @@ $("#owl-demo").owlCarousel({
 });
  
 });
-
-var me = getUrlVars()["thanks"];
-if(new String(me).valueOf() == new String("true#public").valueOf()){
-	var y = document.getElementsByClassName('.form-submit');
-	var aNode = y[0];
-	console.log(aNode);
-}
 </script>
 </head>
 <body>
@@ -333,4 +315,24 @@ if(new String(me).valueOf() == new String("true#public").valueOf()){
 </div>
 
 </body>
+<script type="text/javascript">
+function getUrlVars()
+{
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+	var me = getUrlVars()["thanks"];
+if(new String(me).valueOf() == new String("true#public").valueOf()){
+	var y = document.getElementsByClassName('form-submit');
+	var aNode = y[0];
+	console.log(y);
+}
+</script>
 </html>

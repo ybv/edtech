@@ -154,24 +154,40 @@ body{
 }
 </style>
 <script type="text/javascript">
-	$(document).ready(function() {
- 
-  $("#owl-demo").owlCarousel({
- 
-      navigation : false, // Show next and prev buttons
-      slideSpeed : 1000,
-      paginationSpeed : 2000,
-      singleItem:true,
-      autoPlay: 3000
- 
-      // "singleItem:true" is a shortcut for:
-      // items : 1, 
-      // itemsDesktop : false,
-      // itemsDesktopSmall : false,
-      // itemsTablet: false,
-      // itemsMobile : false
- 
-  });
+function getUrlVars()
+{
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+var me = getUrlVars()["thanks"];
+if(me=="true"){
+	alert("thanks");
+}
+$(document).ready(function() {
+
+$("#owl-demo").owlCarousel({
+
+    navigation : false, // Show next and prev buttons
+    slideSpeed : 1000,
+    paginationSpeed : 2000,
+    singleItem:true,
+    autoPlay: 3000
+
+    // "singleItem:true" is a shortcut for:
+    // items : 1, 
+    // itemsDesktop : false,
+    // itemsDesktopSmall : false,
+    // itemsTablet: false,
+    // itemsMobile : false
+
+});
  
 });
 </script>

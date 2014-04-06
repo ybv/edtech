@@ -189,8 +189,7 @@ $("#owl-demo").owlCarousel({
 
 var me = getUrlVars()["thanks"];
 if(new String(me).valueOf() == new String("true#public").valueOf()){
-	var thanksForm = document.getElementById('form-to-hide');
-	thanksForm.style.display = "none";
+	$( "#form-to-hide" ).hide();
 }
 </script>
 </head>

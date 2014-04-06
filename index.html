@@ -167,7 +167,9 @@ function getUrlVars()
     return vars;
 }
 var me = getUrlVars()["thanks"];
-alert(me);
+if(new String(me).valueOf() == new String("true#public").valueOf()){
+	alert("ok");
+}
 $(document).ready(function() {
 
 $("#owl-demo").owlCarousel({

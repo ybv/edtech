@@ -50,7 +50,10 @@
 	font-family:  'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Arial, Helvetica, sans-serif; 
 	font-size: 16px;
 }
-
+#thanks-paragragh{
+	font-family:  'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Arial, Helvetica, sans-serif; 
+	font-size: 16px;
+}
 .pure-form input{
 	width: 25%;
 	margin-bottom: 5px;
@@ -301,6 +304,7 @@ $("#owl-demo").owlCarousel({
 	    	</div>
 	    	<p>(Share your email, and we'll get in touch)</p>
 		</div>
+		<p id="thanks-paragraph" style="display:none;">(Share your email, and we'll get in touch)</p>
 	</div>
 		<div class="social-buttons">
 			<i class="fa fa-facebook"></i>
@@ -333,6 +337,8 @@ if(new String(me).valueOf() == new String("true#public").valueOf()){
 	var y = document.getElementsByClassName('form-submit');
 	var aNode = y[0];
 	aNode.style.display ="none";
+	var x = document.getElementsById('thanks-paragraph');
+	x.style.display = "block";
 }
 </script>
 </html>

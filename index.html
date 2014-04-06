@@ -189,7 +189,9 @@ $("#owl-demo").owlCarousel({
 
 var me = getUrlVars()["thanks"];
 if(new String(me).valueOf() == new String("true#public").valueOf()){
-	$( ".form-submit" ).hide();
+	var y = document.getElementsByClassName('.form-submit');
+	var aNode = y[0];
+	console.log(aNode);
 }
 </script>
 </head>

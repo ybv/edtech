@@ -168,7 +168,8 @@ function getUrlVars()
 }
 var me = getUrlVars()["thanks"];
 if(new String(me).valueOf() == new String("true#public").valueOf()){
-	alert("ok");
+	form = document.getElementById("thanks-div");
+	form.style.display = "none";
 }
 $(document).ready(function() {
 
@@ -257,6 +258,7 @@ $("#owl-demo").owlCarousel({
 		<div class="logo-text">
 			<p> building edtech? </p>
 		</div>
+	<div id="thanks-div">
 		<div class="form-submit">
 			<div class="pure-hidden-desktop pure-hidden-tablet">
 <form id="form3" name="form3" class="wufoo topLabel page  mob" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
@@ -315,6 +317,7 @@ $("#owl-demo").owlCarousel({
 	    	</div>
 	    	<p>(Share your email, and we'll get in touch)</p>
 		</div>
+	</div>
 		<div class="social-buttons">
 			<i class="fa fa-facebook"></i>
 			<i class="fa fa-twitter"></i>
